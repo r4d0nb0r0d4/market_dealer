@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext", "dom"],
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "pretty": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "__service/*": ["src/service/*"],
+      "__service": ["src/service"],
+      "__controllers/*": ["src/controllers/*"],
+      "__controllers": ["src/controllers"],
+      "__routes/*": ["src/routes/*"],
+      "__routes": ["src/routes"],
+      "__constants/*": ["src/constants/*"],
+      "__constants": ["src/constants"],
+      "__utils/*": ["src/utils/*"],
+      "__utils": ["src/utils"],
+      "__types/*": ["src/types/*"],
+      "__types": ["src/types"],
+      "__models/*": ["src/models/*"],
+      "__models": ["src/models"],
+      "__modules/*": ["src/modules/*"],
+      "__modules": ["src/modules"]
+    },
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true
+  }
+}
