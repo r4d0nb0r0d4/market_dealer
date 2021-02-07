@@ -1,2 +1,3 @@
-# market_dealer
-The applicathion for auto purchase/sell of skins
+# Market Dealer
+
+The application for auto purchase/sell of skins
