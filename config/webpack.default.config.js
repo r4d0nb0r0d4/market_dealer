@@ -1,11 +1,15 @@
 const path = require('path');
 
 const webpackDefaultConfig = {
-  entry: './src/index.ts',
+  entry: {
+    app: './src/index.ts',
+    containerDealer: './src/service/ContainerDealer/index.ts',
+  },
+
   target: 'node',
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].js',
+    path: __dirname + './../dist',
   },
 
   module: {
@@ -18,7 +22,7 @@ const webpackDefaultConfig = {
       {
         test: /\.ts$/,
         loader: 'ts-loader',
-        exclude: [/node_modules/, /dist/],
+        exclude: [/node_modules/],
       },
     ],
   },
