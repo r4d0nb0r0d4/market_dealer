@@ -1,4 +1,4 @@
-import { TCallback } from '__utils';
+import { Express } from 'express';
 
 export type TExpressServerConstructor = (options?: Options) => TExpressServer;
 
@@ -11,3 +11,5 @@ export type TExpressServer = {
 };
 
 export type TInit = (cb?: TCallback) => void;
+
+export type TCallback = (app: Express) => void;

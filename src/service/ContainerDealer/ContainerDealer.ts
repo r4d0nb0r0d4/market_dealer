@@ -1,13 +1,16 @@
 import { Express } from 'express';
 
+import { DEFAULT_CONTAINER_DEALER_PORT } from '__constants/ports';
+
 import ExpressServer from '__modules/ExpressServer';
+import { TCallback, TExpressServer } from '__modules/ExpressServer/types';
 
-import ContainerDealerRouter from '__routes/ContainerDealerRouter';
+import ContainerDealerRoute from '__routes/ContainerDealerRoute';
 
-const server = ExpressServer({ port: '3001' });
+const server: TExpressServer = ExpressServer({ port: DEFAULT_CONTAINER_DEALER_PORT });
 
-const serverMiddleware = (app: Express) => {
-  app.use(ContainerDealerRouter);
+const serverMiddleware: TCallback = (app: Express) => {
+  app.use(ContainerDealerRoute);
 };
 
 server.init(serverMiddleware);
