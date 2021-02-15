@@ -1,8 +1,14 @@
-const webpackDefaultConfig = require('./webpack.default.config');
+const webpackConfig = require('./webpack.config');
+const webpackLambdaConfig = require('./webpack.lambda.config');
 
 const webpackProductionConfig = {
-  ...webpackDefaultConfig,
+  ...webpackConfig,
   mode: 'production',
 };
 
-module.exports = webpackProductionConfig;
+const webpackLambdaProductionConfig = {
+  ...webpackLambdaConfig,
+  mode: 'production',
+};
+
+module.exports = [webpackProductionConfig, webpackLambdaProductionConfig];

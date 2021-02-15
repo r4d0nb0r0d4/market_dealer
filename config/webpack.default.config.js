@@ -1,17 +1,7 @@
-
-const entry = require('./entries.config');
 const alias = require('./alias.config');
 
-const webpackDefaultConfig = {
-  entry,
-
+const webpackConfig = {
   target: 'node',
-  output: {
-    filename: '[name].js',
-    path: __dirname + './../dist',
-    libraryTarget: 'umd',
-  },
-
   module: {
     rules: [
       {
@@ -33,4 +23,4 @@ const webpackDefaultConfig = {
   },
 };
 
-module.exports = webpackDefaultConfig;
+module.exports = webpackConfig;
