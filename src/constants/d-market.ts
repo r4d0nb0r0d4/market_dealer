@@ -1,12 +1,4 @@
-import {
-  Category,
-  Currency,
-  GameId,
-  MiscCategoryPath,
-  OrderBy,
-  OrderDir,
-  TreeFiltersKeys,
-} from '__service/DMarket/enums';
+import { Currency, GameId, OrderBy, OrderDir } from '__service/DMarket/enums';
 import { TGetMarketItemsQuery } from '__service/DMarket/getMarketItems/types';
 import { TKeyPair } from '__service/DMarket/types';
 
@@ -27,15 +19,8 @@ export const MIN_PROFIT = 3;
 export const CHECK_AND_BUY_CONTAINERS_LAMBDA_LIFETIME = 2500;
 
 export const DEFAULT_QUERY: TGetMarketItemsQuery = {
-  treeFilters: {
-    [TreeFiltersKeys.categoryPath]: {
-      [Category.misc]: new Set([MiscCategoryPath.container, MiscCategoryPath.sticker]),
-    },
-  },
   orderBy: OrderBy.updated,
   orderDir: OrderDir.desc,
-  priceFrom: 0,
-  priceTo: 6000,
   gameId: GameId.CSGO,
   limit: 20,
   currency: Currency.USD,

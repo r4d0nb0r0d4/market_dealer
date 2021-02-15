@@ -39,8 +39,8 @@ export type TGetMarketItemsQuery = {
   limit: number;
   orderBy: OrderBy;
   orderDir: OrderDir;
-  priceFrom: number;
-  priceTo: number;
+  priceFrom?: number;
+  priceTo?: number;
   treeFilters?: TTreeFilters;
   title?: string;
 };

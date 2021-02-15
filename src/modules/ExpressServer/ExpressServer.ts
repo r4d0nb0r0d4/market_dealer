@@ -1,14 +1,15 @@
 import express, { Express } from 'express';
 
-import { DEFAULT_PORT, PROCESS_PORT } from '__constants/ports';
+// import { PROCESS_PORT } from '__constants/ports';
 
 import ConsoleMessage from '__modules/ConsoleMessage';
-import { Options, TCallback, TExpressServerConstructor, TInit } from '__modules/ExpressServer/types';
+import { TCallback, TExpressServerConstructor, TInit } from '__modules/ExpressServer/types';
 
-const ExpressServer: TExpressServerConstructor = (options?: Options) => {
+const ExpressServer: TExpressServerConstructor = () => {
   let app: Express | null = null;
 
-  const port: string = PROCESS_PORT || options?.port || DEFAULT_PORT;
+  // @ts-ignore
+  const port: string = process.env.PORT || 3000;
 
   const init: TInit = (cb?: TCallback) => {
     if (app !== null) {
