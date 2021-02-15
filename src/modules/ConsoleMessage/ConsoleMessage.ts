@@ -2,7 +2,8 @@ import chalk from 'chalk';
 
 import { TConsoleMessage, TMessage } from '__modules/ConsoleMessage/types';
 
-const messageGood: TMessage = (...args: any[]) => console.log(chalk.green(`${new Date().toLocaleString()}: `, ...args));
+const messageSuccess: TMessage = (...args: any[]) =>
+  console.log(chalk.green(`${new Date().toLocaleString()}: `, ...args));
 
 const messageError: TMessage = (...args: any[]) => console.log(chalk.red(`${new Date().toLocaleString()}: `, ...args));
 
@@ -12,7 +13,7 @@ const messageWarning: TMessage = (...args: any[]) =>
 const messageText: TMessage = (...args: any[]) => console.log(chalk.blue(`${new Date().toLocaleString()}: `, ...args));
 
 const ConsoleMessage: TConsoleMessage = {
-  good: messageGood,
+  success: messageSuccess,
   error: messageError,
   warning: messageWarning,
   text: messageText,

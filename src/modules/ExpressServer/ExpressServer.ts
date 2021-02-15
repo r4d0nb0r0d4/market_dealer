@@ -28,7 +28,7 @@ const ExpressServer: TExpressServerConstructor = (options?: Options) => {
     }
 
     app.listen(port, () => {
-      ConsoleMessage.good(`SERVER HAS BEEN STARTED ON PORT ${port}`);
+      ConsoleMessage.success(`SERVER HAS BEEN STARTED ON PORT ${port}`);
     });
   };
 
