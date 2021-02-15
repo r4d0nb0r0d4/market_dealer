@@ -1,9 +1,16 @@
-const webpackDefaultConfig = require('./webpack.default.config');
+const webpackConfig = require('./webpack.config');
+const webpackLambdaConfig = require('./webpack.lambda.config');
 
 const webpackDevelopmentConfig = {
-  ...webpackDefaultConfig,
+  ...webpackConfig,
   mode: 'development',
   devtool: 'cheap-source-map',
 };
 
-module.exports = webpackDevelopmentConfig;
+const webpackLambdaDevelopmentConfig = {
+  ...webpackLambdaConfig,
+  mode: 'development',
+  devtool: 'cheap-source-map',
+};
+
+module.exports = [webpackDevelopmentConfig, webpackLambdaDevelopmentConfig];
